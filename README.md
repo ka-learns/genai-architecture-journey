@@ -23,32 +23,15 @@ It contains hands-on projects, learning notes, and certification prep for roles 
 ---
 
 ## 📂 Repo Structure
-
-
 .
- * [tree-md](./tree-md)
- * [dir2](./dir2)
-   * [file21.ext](./dir2/file21.ext)
-   * [file22.ext](./dir2/file22.ext)
-   * [file23.ext](./dir2/file23.ext)
- * [dir1](./dir1)
-   * [file11.ext](./dir1/file11.ext)
-   * [file12.ext](./dir1/file12.ext)
- * [file_in_root.ext](./file_in_root.ext)
+ * [genai-architecture-journey](./genai-architecture-journey)
+ * [notebooks/ # Jupyter + Colab explorations](./notebooks)
+   * [week1](./notebooks/week1)
+ * [projects/ # Resume-ready, deployable projects](./projects)
+   * [week1](./projects/week1)
+ * [notes/ # Weekly summaries + learnings](./notes)
+ * [cert_prep/ # Study notes for NVIDIA + Coursera](./cert_prep)
  * [README.md](./README.md)
- * [dir3](./dir3)
-
-genai-architecture-journey/
-│
-├── notebooks/ # Jupyter + Colab explorations
-│ └── week1/
-│
-├── projects/ # Resume-ready, deployable projects
-│ └── week1/
-│
-├── notes/ # Weekly summaries + learnings
-│
-├── cert_prep/ # Study notes for NVIDIA + Coursera
 
 ---
 
