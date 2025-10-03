@@ -17,8 +17,10 @@ It contains hands-on projects, learning notes, and certification prep for roles 
 
 ## 📘 Learning Modules
 - [Generative AI with Large Language Models (Coursera)](https://www.coursera.org/learn/generative-ai-with-llms)  
-- [NVIDIA NCA-GENL Certification](https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/)  
-- [NVIDIA NCP-AII Certification](https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-professional/)  
+- [NVIDIA NCA-GENL Certification](https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/)
+- [NVIDIA NCA-AIIO Certification](https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-operations-associate/)
+- [NVIDIA NCP-AII Certification](https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-professional/)
+- [NVIDIA NCP-AIO Certification](https://www.nvidia.com/en-us/learn/certification/ai-operations-professional/)
 
 ---
 
