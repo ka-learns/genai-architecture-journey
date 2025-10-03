@@ -1,1 +1,1 @@
-# genii-architecture-journey
+# genai-architecture-journey
