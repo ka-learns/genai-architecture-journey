@@ -72,3 +72,22 @@
     - Model interoperability: Different models = different tokenizers. Mixing them causes nonsense results
     - Debugging generation issues: When outputs truncate weirdly, it’s often due to tokenization mismatches
 
+## Sentiment Analysis
+- I downloaded a pretrained model BERT for sentiment analysis
+- I then passed in a sample text to see how the LLM analyzed the sentiment, which came out amazing
+- I then tried multiple inputs and it analyzed them correctly
+- Tried another model ROBERTA
+- It gave a good score, but the sentiment analysis labels were weird
+- I wonder if I could modify the labels?
+- It looks like the model is not pretrained on sentiment analysis, while it still can score it doesn't know how to label the score
+- You can manually define or override the label mapping, example below
+    - ``from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline``
+    - ``model_name = "roberta-base"  # or your fine-tuned model``
+    - ``model = AutoModelForSequenceClassification.from_pretrained(model_name)``
+    - ``tokenizer = AutoTokenizer.from_pretrained(model_name)``
+    - ``# manually define label mapping``
+    - ``model.config.id2label = {0: "NEGATIVE", 1: "POSITIVE"}``
+    - ``model.config.label2id = {"NEGATIVE": 0, "POSITIVE": 1}``
+    - ``# create pipeline``
+    - ``nlp = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)``
+
