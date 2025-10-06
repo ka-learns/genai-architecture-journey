@@ -27,9 +27,7 @@ It contains hands-on projects, learning notes, and certification prep for roles 
 ## 📂 Repo Structure
 . 
  * [notebooks/](./notebooks)  # Jupyter + Colab explorations
-   * [week1](./notebooks/week1)
  * [projects/](./projects)  # Resume-ready, deployable projects
-   * [week1](./projects/week1)
  * [notes/](./notes)  # Weekly summaries + learnings
  * [cert_prep/](./cert_prep) # Study notes for NVIDIA + Coursera
  * [README.md](./README.md)
@@ -40,12 +38,3 @@ It contains hands-on projects, learning notes, and certification prep for roles 
 - **Project 1:** Customer Support Chatbot (LLM + API + Docker)  
 - **Project 2:** RAG Knowledge Assistant (Vector DB + LLM)  
 - **Project 3:** Scalable Inference Pipeline (Triton + K8s + TensorRT)  
-
----
-
-## ✅ Week 1 Progress
-- [x] Hugging Face pipeline demo (`distilgpt2`)  
-- [x] Google Colab GPU test  
-- [x] Docker installation & test  
-- [ ] Notebook: Prompt engineering experiments  
-- [ ] Weekly summary notes  
