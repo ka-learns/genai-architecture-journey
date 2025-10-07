@@ -91,3 +91,29 @@
     - ``# create pipeline``
     - ``nlp = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)``
 
+# Week 1 Day 3
+
+## Tokenization: Special Tokens, Padding, Truncation
+- Understand how text is converted into numbers and structured for models
+- Explore every token, padding, truncation, and special tokens
+- ``bert-base-uncased`` is a model that knows English words in lowercase
+- Explanation of Each Token:
+    - Class Token (CLS): marks the start of a sentence, used for classification tasks
+    - Separator Token (SEP): markes the end of a sentence, seperates sentences, used in question-answer or sentence-pair tasks
+    - Padding Token (PAD): add extra tokens to make all sentences same length in a batch, empty spaces the model ignores
+    - Markers that tell the model “start,” “end,” and “ignore”
+- `input_ids`: numbers corresponding to words and special tokens
+    - CLS = 101, SEP = 102, PAD = 0
+- `attention_mask`: 1 for real tokens (pay attention), 0 for padding (ignore)
+- `input_ids` and `attention_mask` are almost always present for batched inputs
+- `token_type_ids` appear if the model architecture uses segment embeddings (BERT family), usually identify which segment this is from
+    - have not been able to create any outputs with different segments
+    - usually token type ids will be ignored or not even generated with other models, so I guess I am ok to skip this
+- Padding: Makes all sequences the same length ``max_length=8`` by adding [PAD] tokens
+- Truncation: Cuts sequences longer than ``max_length``
+- In batching, all sentences should be same length
+- Tensors are just multi-dimensional arrays, faster for math, GPU-friendly, and models expect them as input
+    - pt = pyTorch: torch.Tensor objects (most common)
+    - tf = TensorFlow: tf.Tensor objects (will be deprecated with Transformers lib)
+    - np = numpy: numpy.ndarray arrays
+    - none = python default
