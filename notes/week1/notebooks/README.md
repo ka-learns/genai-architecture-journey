@@ -117,3 +117,24 @@
     - tf = TensorFlow: tf.Tensor objects (will be deprecated with Transformers lib)
     - np = numpy: numpy.ndarray arrays
     - none = python default
+
+## GPU Validation
+- Check if a machine has a GPU, learn how to borrow from Colab
+- CPU is like a single helper who does many things slowly
+- GPU is like a team of hundreds of helpers who can all work at once, large computations, parallelization
+- GPUs make models learn thousands of times faster
+- PyTorch: a library that helps computers do math with tensor objects very fast, especially using GPUs
+- Test how long it takes torch.rand(10000,10000) and y = torch.matmul(x, x) to run
+    - ``torch.rand(x,y)`` generate tensor object with random float numbers between 0.0 and 1.0 that is x columns and y rows long
+    - used to generate dummy data in testing
+    - 10000,10000 = generate 100 million numbers (10000x10000)
+    - ``torch.matmul(x, x)`` 
+    - multiply rows of one by columns of the other
+    - 10000 x 10000 = 100,000,000 numbers * 10,000 calculations = 1 trillion operations 
+    - Every time a neural network layer does its job, it’s basically doing this, but with huge matrices
+        - Each input sentence → becomes a big list of numbers (a tensor).
+        - Each layer of the model → has its own matrix of “weights” (numbers the model learned).
+        - When you feed data in, the model multiplies the input matrix by the weight matrix to create new meaning — this is how it “thinks”.
+        - combining information (x) with learned knowledge (y) to make predictions
+- Helps to visualize how the performance of GPUs compares to CPUs when performing a trillion operations
+- CPU took 24 seconds and GPU was less than 0.004 sec
